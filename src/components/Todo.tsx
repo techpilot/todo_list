@@ -6,6 +6,7 @@ import {
   useState,
 } from 'react';
 import '../styles/Todo.css';
+import Search from './Search';
 import TodoList from './TodoList';
 import SelectComponent from './utils/reusables/SelectComponent';
 
@@ -75,16 +76,14 @@ const Todo = () => {
 
         <SelectComponent
           disabled={false}
-          elements={['All', 'Work', 'Chores', 'Others']}
+          elements={['All', 'Work', 'Read', 'Others']}
           categoryState={categoryState}
           setCategoryState={setCategoryState}
           setTodoList={setTodoList}
         />
       </div>
 
-      <div className="search-input-wrapper">
-        <input placeholder="Search items" className="search-input" />
-      </div>
+      <Search setTodoList={setTodoList} />
 
       {todoList?.length > 0 && (
         <div className="todo-items-container">
@@ -95,7 +94,7 @@ const Todo = () => {
       )}
 
       {todoList?.length === 0 && (
-        <p>{`No Todo in ${categoryState} category`}</p>
+        <p>{`No Todo in ${categoryState} Category`}</p>
       )}
     </div>
   );

@@ -25,7 +25,6 @@ const SelectComponent: React.FC<SelectComponentProps> = ({
   const handleCategoryChange = (
     event: React.ChangeEvent<HTMLSelectElement>
   ) => {
-    event.preventDefault();
     const newValue = event.target.value;
     setCategoryState(newValue);
 
