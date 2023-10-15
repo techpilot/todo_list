@@ -13,11 +13,13 @@ interface TodoState {
   id: string;
   text: string;
   read: boolean;
+  category: string;
 }
 
 const Todo = () => {
   const [input, setInput] = useState<string>('');
   const [todoList, setTodoList] = useState<TodoState[]>([]);
+  const [categoryState, setCategoryState] = useState<string>('All');
 
   const getExistingList = (): TodoState[] => {
     const eList: string | null = localStorage.getItem('todoList') ?? '';
@@ -33,6 +35,7 @@ const Todo = () => {
         id: Math.floor(Math.random() * 10000).toString(),
         text: input,
         read: false,
+        category: categoryState == 'All' ? 'Others' : categoryState,
       });
 
       localStorage.setItem('todoList', JSON.stringify(existingList));
@@ -72,7 +75,10 @@ const Todo = () => {
 
         <SelectComponent
           disabled={false}
-          elements={['All', 'Work', 'Chores']}
+          elements={['All', 'Work', 'Chores', 'Others']}
+          categoryState={categoryState}
+          setCategoryState={setCategoryState}
+          setTodoList={setTodoList}
         />
       </div>
 
@@ -85,6 +91,10 @@ const Todo = () => {
           <TodoList listItem={item} setTodoList={setTodoList} />
         ))}
       </div>
+
+      {todoList?.length === 0 && (
+        <div className="todo-items-container">{`No Todo in ${categoryState} category`}</div>
+      )}
     </div>
   );
 };

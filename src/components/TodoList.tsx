@@ -12,6 +12,7 @@ interface TodoState {
   id: string;
   text: string;
   read: boolean;
+  category: string;
 }
 
 const TodoList: React.FC<MyComponentProps> = ({ listItem, setTodoList }) => {
