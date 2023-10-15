@@ -1,4 +1,3 @@
-import todoIcon from '../../public/icon.png';
 import './styles/Todo.css';
 import CopyIcon from './utils/icons/CopyIcon';
 import DeleteIcon from './utils/icons/DeleteIcon';
@@ -21,7 +20,7 @@ const Todo = () => {
       <div className="todo-items-container">
         <div className="item-wrapper">
           <div className="todo-item">
-            <img className="todo-icon" src={todoIcon} alt="" />
+            <img className="todo-icon" src="/src/assets/icon.png" alt="" />
             <p className="todo-item-text">
               Item coming home Item coming home Item home{' '}
             </p>
@@ -35,7 +34,7 @@ const Todo = () => {
 
         <div className="item-wrapper">
           <div className="todo-item">
-            <img className="todo-icon" src={todoIcon} alt="" />
+            <img className="todo-icon" src="/src/assets/icon.png" alt="" />
             <p className="todo-item-text">
               Item coming home Item coming home Item home{' '}
             </p>
