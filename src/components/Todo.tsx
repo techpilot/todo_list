@@ -95,7 +95,7 @@ const Todo = () => {
       )}
 
       {todoList?.length === 0 && (
-        <div className="todo-items-container">{`No Todo in ${categoryState} category`}</div>
+        <p>{`No Todo in ${categoryState} category`}</p>
       )}
     </div>
   );
