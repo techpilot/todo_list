@@ -90,6 +90,10 @@
   border-radius: 5px;
 }
 
+.item-wrapper-read {
+  opacity: 0.3;
+}
+
 .todo-item {
   display: flex;
   align-items: center;
@@ -106,6 +110,10 @@
   font-size: 0.75rem;
   font-weight: 600;
   margin: 0 !important;
+}
+
+.todo-item-read {
+  text-decoration: line-through;
 }
 
 .todo-actions-wrapper {

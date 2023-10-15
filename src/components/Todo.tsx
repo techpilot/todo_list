@@ -5,12 +5,13 @@ import {
   useEffect,
   useState,
 } from 'react';
+import '../styles/Todo.css';
 import TodoList from './TodoList';
-import './styles/Todo.css';
 
 interface TodoState {
   id: string;
   text: string;
+  read: boolean;
 }
 
 const Todo = () => {
@@ -25,14 +26,18 @@ const Todo = () => {
   };
 
   const addTodo: MouseEventHandler<Element> = () => {
-    const existingList = getExistingList();
-    existingList.unshift({
-      id: Math.floor(Math.random() * 10000).toString(),
-      text: input,
-    });
-    localStorage.setItem('todoList', JSON.stringify(existingList));
-    setTodoList(existingList);
-    setInput('');
+    if (input) {
+      const existingList = getExistingList();
+      existingList.unshift({
+        id: Math.floor(Math.random() * 10000).toString(),
+        text: input,
+        read: false,
+      });
+
+      localStorage.setItem('todoList', JSON.stringify(existingList));
+      setTodoList(existingList);
+      setInput('');
+    }
   };
 
   const handleChange: ChangeEventHandler<Element> = (event: ChangeEvent) => {
@@ -68,8 +73,8 @@ const Todo = () => {
       </div>
 
       <div className="todo-items-container">
-        {todoList?.map((list) => (
-          <TodoList id={list?.id} text={list?.text} setTodoList={setTodoList} />
+        {todoList?.map((item) => (
+          <TodoList listItem={item} setTodoList={setTodoList} />
         ))}
       </div>
     </div>
