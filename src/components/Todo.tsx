@@ -86,11 +86,13 @@ const Todo = () => {
         <input placeholder="Search items" className="search-input" />
       </div>
 
-      <div className="todo-items-container">
-        {todoList?.map((item) => (
-          <TodoList listItem={item} setTodoList={setTodoList} />
-        ))}
-      </div>
+      {todoList?.length > 0 && (
+        <div className="todo-items-container">
+          {todoList?.map((item) => (
+            <TodoList listItem={item} setTodoList={setTodoList} />
+          ))}
+        </div>
+      )}
 
       {todoList?.length === 0 && (
         <div className="todo-items-container">{`No Todo in ${categoryState} category`}</div>
