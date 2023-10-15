@@ -44,6 +44,17 @@ const TodoList: React.FC<MyComponentProps> = ({ listItem, setTodoList }) => {
     setTodoList(updatedItem);
   };
 
+  const copyToClipboard: MouseEventHandler<Element> = () => {
+    navigator.clipboard
+      .writeText(listItem?.text)
+      .then(() => {
+        return;
+      })
+      .catch((error) => {
+        console.error('Failed to copy text: ', error);
+      });
+  };
+
   return (
     <div
       className={
@@ -68,7 +79,10 @@ const TodoList: React.FC<MyComponentProps> = ({ listItem, setTodoList }) => {
         <div onClick={markAsRead}>
           <MarkIcon />
         </div>
-        <CopyIcon />
+
+        <div onClick={copyToClipboard}>
+          <CopyIcon />
+        </div>
       </div>
     </div>
   );
