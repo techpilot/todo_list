@@ -68,7 +68,9 @@ const Todo = () => {
       </div>
 
       <div className="todo-items-container">
-        {todoList?.map((list) => <TodoList id={list?.id} list={list?.text} />)}
+        {todoList?.map((list) => (
+          <TodoList id={list?.id} text={list?.text} setTodoList={setTodoList} />
+        ))}
       </div>
     </div>
   );
