@@ -1,0 +1,30 @@
+.main-container {
+  height: max-content;
+  width: 8rem;
+}
+
+.select-wrapper {
+  position: relative;
+  display: flex;
+  justify-items: center;
+  --tw-bg-opacity: 1;
+  background-color: #161a2b;
+  border-radius: 0.2rem;
+  border-style: none;
+}
+
+.select {
+  width: 100%;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  background-color: black;
+  outline: none;
+  background-color: inherit;
+  border-radius: 0.2rem;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+}

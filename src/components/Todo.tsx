@@ -7,6 +7,7 @@ import {
 } from 'react';
 import '../styles/Todo.css';
 import TodoList from './TodoList';
+import SelectComponent from './utils/reusables/SelectComponent';
 
 interface TodoState {
   id: string;
@@ -56,19 +57,26 @@ const Todo = () => {
     <div className="todo-container">
       <p className="todo-title">Let's make plans for today</p>
 
-      <div className="todo-input-wrapper">
-        <input
-          placeholder="Add item"
-          value={input}
-          onChange={handleChange}
-          className="add-todo-input"
+      <div className="main-wrapper">
+        <div className="todo-input-wrapper">
+          <input
+            placeholder="Add item"
+            value={input}
+            onChange={handleChange}
+            className="add-todo-input"
+          />
+          <button onClick={addTodo} className="add-button">
+            Add Todo
+          </button>
+        </div>
+
+        <SelectComponent
+          disabled={false}
+          elements={['All', 'Work', 'Chores']}
         />
-        <button onClick={addTodo} className="add-button">
-          Add Todo
-        </button>
       </div>
 
-      <div className="todo-input-wrapper">
+      <div className="search-input-wrapper">
         <input placeholder="Search items" className="search-input" />
       </div>
 

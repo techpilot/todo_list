@@ -20,15 +20,22 @@
   margin-top: -0.5rem;
 }
 
+.main-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-top: 1rem;
+}
+
 .todo-input-wrapper {
   display: flex;
+  flex: 1;
   justify-content: space-between;
   align-items: center;
   border: 1px solid #3366ff;
   border-radius: 0.2rem;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  margin-top: 1rem;
 }
 
 .add-todo-input {
@@ -44,6 +51,17 @@
   border: none;
   border-radius: 0 0.2rem 0.2rem 0;
   background-color: #3366ff;
+}
+
+.search-input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #3366ff;
+  border-radius: 0.2rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-top: 1rem;
 }
 
 .search-input {
