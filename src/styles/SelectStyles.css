@@ -1,6 +1,7 @@
 .main-container {
   height: max-content;
   width: 8rem;
+  place-self: end;
 }
 
 .select-wrapper {

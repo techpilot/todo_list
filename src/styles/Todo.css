@@ -1,7 +1,7 @@
 .todo-container {
   display: flex;
   flex-direction: column;
-  width: 95%;
+  width: 95vw;
   height: 90vh;
   border: none;
   border-radius: 10px;
@@ -22,16 +22,18 @@
 
 .main-wrapper {
   display: flex;
+  flex-direction: column;
   gap: 0.5rem;
   align-items: center;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   margin-top: 1rem;
 }
 
 .todo-input-wrapper {
   display: flex;
   flex: 1;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   border: 1px solid #3366ff;
@@ -51,6 +53,7 @@
   border: none;
   border-radius: 0 0.2rem 0.2rem 0;
   background-color: #3366ff;
+  min-width: 8rem;
 }
 
 .search-input-wrapper {
@@ -59,8 +62,8 @@
   align-items: center;
   border: 1px solid #3366ff;
   border-radius: 0.2rem;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   margin-top: 1rem;
 }
 
@@ -80,8 +83,8 @@
   flex-direction: column;
   gap: 0.5rem;
   margin-top: 1rem;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   overflow-y: scroll;
 }
 
@@ -142,7 +145,7 @@
 
 @media screen and (min-width: 767px) {
   .todo-container {
-    width: 60vw;
+    width: 65vw;
     height: 78vh;
     margin-left: 0;
   }
@@ -158,16 +161,36 @@
   .todo-actions-wrapper {
     gap: 0.5rem;
   }
+
+  .main-wrapper {
+    flex-direction: row;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .search-input-wrapper {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .todo-items-container {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 1023px) {
   .todo-container {
-    width: 47vw;
+    width: 49vw;
   }
 }
 
 @media screen and (min-width: 1140px) {
   .todo-container {
     width: 35vw;
+  }
+
+  .add-button {
+    min-width: max-content;
   }
 }
