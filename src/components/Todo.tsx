@@ -8,18 +8,19 @@ import {
 import TodoList from './TodoList';
 import './styles/Todo.css';
 
-interface MyState {
+interface TodoState {
   id: string;
   text: string;
 }
 
 const Todo = () => {
   const [input, setInput] = useState<string>('');
-  const [todoList, setTodoList] = useState<MyState[]>([]);
+  const [todoList, setTodoList] = useState<TodoState[]>([]);
 
-  const getExistingList = (): MyState[] => {
+  const getExistingList = (): TodoState[] => {
     const eList: string | null = localStorage.getItem('todoList') ?? '';
-    const existingList: MyState[] = eList?.length > 0 ? JSON.parse(eList) : [];
+    const existingList: TodoState[] =
+      eList?.length > 0 ? JSON.parse(eList) : [];
     return existingList;
   };
 
@@ -41,7 +42,7 @@ const Todo = () => {
 
   useEffect(() => {
     const todoList: string | null = localStorage.getItem('todoList') ?? '';
-    const existingTodoList: MyState[] =
+    const existingTodoList: TodoState[] =
       todoList?.length > 0 ? JSON.parse(todoList) : [];
     setTodoList(existingTodoList);
   }, []);
