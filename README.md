@@ -32,8 +32,8 @@ This Todo List project offers a seamless task management experience. Users can e
 
 ### Built With
 
-- [[Typescript]][Typescript_url]
-- [[React.js]][React_js]
+- [Typescript][Typescript_url]
+- [React.js][React_js]
 
 ## Getting Started
 
@@ -48,15 +48,22 @@ Setup and run this project in your computer.
   ```
 
 - yarn
+
   ```sh
   npm install --global yarn
+  ```
+
+- Typescript
+
+  ```sh
+  yarn add typescript --dev
   ```
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   https://github.com/techpilot/todo_list.git
+   git clone https://github.com/techpilot/todo_list.git
    ```
 2. Install packages
    ```sh
