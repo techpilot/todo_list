@@ -76,3 +76,9 @@ Setup and run this project in your computer.
 
 [React_js]: https://react.dev/
 [Typescript_url]: https://www.typescriptlang.org/
+
+## Contact
+
+Stephen Ngwu - [Skype](https://join.skype.com/invite/Oj58adWriGA0) - ngwustephen99@gmail.com
+
+Project Link: [https://github.com/techpilot/todo_list](https://github.com/techpilot/todo_list)

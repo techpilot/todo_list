@@ -5,6 +5,8 @@ import {
   useEffect,
   useState,
 } from 'react';
+import img from '../assets/done-icon.png';
+import bgImg from '../assets/icon.png';
 import '../styles/Todo.css';
 import Search from './Search';
 import TodoList from './TodoList';
@@ -113,6 +115,30 @@ const Todo = () => {
       {todoList?.length === 0 && (
         <p>{`No Todo in ${categoryState} Category`}</p>
       )}
+
+      <div
+        style={{
+          position: 'fixed',
+          zIndex: '-10',
+          left: '3rem',
+          top: '2rem',
+          opacity: '0.7',
+        }}
+      >
+        <img src={bgImg} alt="" style={{ height: '10rem', widows: '10rem' }} />
+      </div>
+
+      <div
+        style={{
+          position: 'fixed',
+          zIndex: '-10',
+          right: '3rem',
+          bottom: '2rem',
+          opacity: '0.7',
+        }}
+      >
+        <img src={img} alt="" style={{ height: '10rem', width: '10rem' }} />
+      </div>
     </div>
   );
 };
