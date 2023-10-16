@@ -1,27 +1,73 @@
-# React + TypeScript + Vite
+<br />
+<div align="center">
+  <p>
+    <img src="/src/assets/icon.png" alt="Logo" width="80" height="80">
+  </p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  <h3 align="center">TODO LIST</h3>
 
-Currently, two official plugins are available:
+  <p align="center">
+    A simple, easy to use daily todo tool!
+    <br />
+    <br />
+    <a href="">View Demo</a>
+    ·
+    <a href="https://github.com/techpilot/todo_list/issues">Report Bug</a>
+  </p>
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About The Project
 
-## Expanding the ESLint configuration
+This Todo List project offers a seamless task management experience. Users can easily create, organize, and categorize to-dos in a user-friendly interface. The search functionality allows quick access to specific tasks, while a 'copy to clipboard' feature simplifies sharing. Real-time updates ensure efficiency, and the responsive design ensures an optimal experience on all devices and browsers. The website seamlessly blends productivity and accessibility for a delightful and effective task management solution.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Rundown of features
 
-- Configure the top-level `parserOptions` property like this:
+- Added a functionality to create Todo list items
+- Implemented a user-friendly autocomplete search feature, user can search for list items
+- Implemented a feature to copy todo list item contents into clipboard on clicking of an icon
+- Implemented a feature to store todo list items into localstorage so that user can see the data even after refreshing the page
+- Developed nice, simple and responsive user interface that works in all devices and browsers making the user experience straight forward.
+- Users can categorize to-dos based on the type of task like working, reading tasks.
+- Users can mark to-dos as done when they finish a specific task.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+### Built With
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- [[Typescript]][Typescript_url]
+- [[React.js]][React_js]
+
+## Getting Started
+
+Setup and run this project in your computer.
+
+### Prerequisites
+
+- Node
+
+  ```sh
+  sudo apt install nodejs
+  ```
+
+- yarn
+  ```sh
+  npm install --global yarn
+  ```
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   https://github.com/techpilot/todo_list.git
+   ```
+2. Install packages
+   ```sh
+   yarn
+   ```
+3. Run the project
+   ```sh
+   yarn dev
+   ```
+
+<p align="right">(<a href="#readme-top">Back to top</a>)</p>
+
+[React_js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[Typescript_url]: https://www.typescriptlang.org/
