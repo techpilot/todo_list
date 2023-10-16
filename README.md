@@ -74,5 +74,5 @@ Setup and run this project in your computer.
    yarn dev
    ```
 
-[React_js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React_js]: https://react.dev/
 [Typescript_url]: https://www.typescriptlang.org/
