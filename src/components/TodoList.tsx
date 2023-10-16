@@ -1,4 +1,5 @@
 import { MouseEventHandler, useState } from 'react';
+import img from '../assets/icon.png';
 import CopyIcon from './utils/icons/CopyIcon';
 import DeleteIcon from './utils/icons/DeleteIcon';
 import MarkIcon from './utils/icons/MarkIcon';
@@ -70,7 +71,7 @@ const TodoList: React.FC<MyComponentProps> = ({ listItem, setTodoList }) => {
       }
     >
       <div className="todo-item">
-        <img className="todo-icon" src="/src/assets/icon.png" alt="" />
+        <img className="todo-icon" src={img} alt="" />
         <div className="item-time-wrapper">
           <span
             className={
