@@ -2,6 +2,7 @@ import { ChangeEvent, ChangeEventHandler, useState } from 'react';
 
 interface SelectComponentProps {
   setTodoList: React.Dispatch<React.SetStateAction<TodoState[]>>;
+  setCategoryState: React.Dispatch<React.SetStateAction<string>>;
 }
 
 interface TodoState {
@@ -11,12 +12,16 @@ interface TodoState {
   category: string;
 }
 
-const Search: React.FC<SelectComponentProps> = ({ setTodoList }) => {
+const Search: React.FC<SelectComponentProps> = ({
+  setTodoList,
+  setCategoryState,
+}) => {
   const [searchterm, setSearchTerm] = useState<string>('');
 
   const handleSearch: ChangeEventHandler<Element> = (event: ChangeEvent) => {
     const elem = event.target as HTMLTextAreaElement;
     setSearchTerm(elem.value);
+    setCategoryState('All');
 
     const todoList: string | null = localStorage.getItem('todoList') ?? '';
     const existingTodoList: TodoState[] =

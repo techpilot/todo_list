@@ -83,7 +83,7 @@ const Todo = () => {
         />
       </div>
 
-      <Search setTodoList={setTodoList} />
+      <Search setTodoList={setTodoList} setCategoryState={setCategoryState} />
 
       {todoList?.length > 0 && (
         <div className="todo-items-container">
