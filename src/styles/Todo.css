@@ -38,6 +38,7 @@
   align-items: center;
   border: 1px solid #4d79ff;
   border-radius: 0.2rem;
+  padding: 0 !important;
 }
 
 .add-todo-input {
@@ -59,6 +60,7 @@
   border: none;
   border-radius: 0 0.2rem 0.2rem 0;
   background-color: #4d79ff;
+  color: #fff;
   /* min-width: 8rem; */
 }
 
