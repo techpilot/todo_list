@@ -50,10 +50,16 @@
 }
 
 .add-button {
+  padding: 0.6em;
+  cursor: pointer;
+  font-size: 0.7em;
+  height: 100%;
+  transition: border-color 0.25s;
+  font-weight: 500;
   border: none;
   border-radius: 0 0.2rem 0.2rem 0;
   background-color: #4d79ff;
-  min-width: 8rem;
+  /* min-width: 8rem; */
 }
 
 .search-input-wrapper {
@@ -193,6 +199,10 @@
   .todo-items-container {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+  }
+
+  .add-button {
+    font-size: 1em;
   }
 }
 
