@@ -8,8 +8,9 @@ interface SelectComponentProps {
 interface TodoState {
   id: string;
   text: string;
-  read: boolean;
+  completed: boolean;
   category: string;
+  date: string;
 }
 
 const Search: React.FC<SelectComponentProps> = ({

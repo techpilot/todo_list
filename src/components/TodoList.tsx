@@ -11,8 +11,9 @@ interface MyComponentProps {
 interface TodoState {
   id: string;
   text: string;
-  read: boolean;
+  completed: boolean;
   category: string;
+  date: string;
 }
 
 const TodoList: React.FC<MyComponentProps> = ({ listItem, setTodoList }) => {
@@ -38,7 +39,7 @@ const TodoList: React.FC<MyComponentProps> = ({ listItem, setTodoList }) => {
 
     const updatedItem = existingTodoList?.map((item) => {
       if (item?.id === listItem?.id) {
-        return { ...item, read: true };
+        return { ...item, completed: true };
       }
       return item;
     });
@@ -65,18 +66,23 @@ const TodoList: React.FC<MyComponentProps> = ({ listItem, setTodoList }) => {
   return (
     <div
       className={
-        listItem?.read ? 'item-wrapper item-wrapper-read' : 'item-wrapper'
+        listItem?.completed ? 'item-wrapper item-wrapper-read' : 'item-wrapper'
       }
     >
       <div className="todo-item">
         <img className="todo-icon" src="/src/assets/icon.png" alt="" />
-        <p
-          className={
-            listItem?.read ? 'todo-item-text todo-item-read' : 'todo-item-text'
-          }
-        >
-          {listItem?.text}
-        </p>
+        <div className="item-time-wrapper">
+          <span
+            className={
+              listItem?.completed
+                ? 'todo-item-text todo-item-read'
+                : 'todo-item-text'
+            }
+          >
+            {listItem?.text}
+          </span>
+          <span className="item-time">{listItem?.date}</span>
+        </div>
       </div>
       <div className="todo-actions-wrapper">
         <div onClick={deleteTodoItem}>

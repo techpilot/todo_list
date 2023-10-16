@@ -13,9 +13,19 @@ import SelectComponent from './utils/reusables/SelectComponent';
 interface TodoState {
   id: string;
   text: string;
-  read: boolean;
+  completed: boolean;
   category: string;
+  date: string;
 }
+
+const options: Intl.DateTimeFormatOptions = {
+  hour: 'numeric',
+  minute: 'numeric',
+  hour12: true,
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric',
+};
 
 const Todo = () => {
   const [input, setInput] = useState<string>('');
@@ -30,13 +40,19 @@ const Todo = () => {
   };
 
   const addTodo: MouseEventHandler<Element> = () => {
+    const formattedDate: string = new Intl.DateTimeFormat(
+      'en-US',
+      options
+    ).format(Date.now());
+
     if (input) {
       const existingList = getExistingList();
       existingList.unshift({
         id: Math.floor(Math.random() * 10000).toString(),
         text: input,
-        read: false,
+        completed: false,
         category: categoryState == 'All' ? 'Others' : categoryState,
+        date: formattedDate,
       });
 
       localStorage.setItem('todoList', JSON.stringify(existingList));
@@ -60,7 +76,7 @@ const Todo = () => {
 
   return (
     <div className="todo-container">
-      <p className="todo-title">Let's make plans for today</p>
+      <p className="todo-title">TODO LIST</p>
 
       <div className="main-wrapper">
         <div className="todo-input-wrapper">
