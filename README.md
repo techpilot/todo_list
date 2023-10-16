@@ -10,7 +10,7 @@
     A simple, easy to use daily todo tool!
     <br />
     <br />
-    <a href="">View Demo</a>
+    <a href="https://todo-list-techpilot.vercel.app">View Demo</a>
     ·
     <a href="https://github.com/techpilot/todo_list/issues">Report Bug</a>
   </p>
