@@ -1,7 +1,7 @@
 <br />
 <div align="center">
   <p>
-    <img src="/src/assets/icon.png" alt="Logo" width="80" height="80">
+    <img src="/public/icon.png" alt="Logo" width="80" height="80"/>
   </p>
 
   <h3 align="center">TODO LIST</h3>
