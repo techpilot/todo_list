@@ -1,4 +1,4 @@
-import { MouseEventHandler } from 'react';
+import { MouseEventHandler, useState } from 'react';
 import CopyIcon from './utils/icons/CopyIcon';
 import DeleteIcon from './utils/icons/DeleteIcon';
 import MarkIcon from './utils/icons/MarkIcon';
@@ -16,6 +16,8 @@ interface TodoState {
 }
 
 const TodoList: React.FC<MyComponentProps> = ({ listItem, setTodoList }) => {
+  const [copyId, setCopyId] = useState<string>('');
+
   const deleteTodoItem: MouseEventHandler<Element> = () => {
     const todoList: string | null = localStorage.getItem('todoList') ?? '';
     const existingTodoList: TodoState[] =
@@ -49,12 +51,16 @@ const TodoList: React.FC<MyComponentProps> = ({ listItem, setTodoList }) => {
     navigator.clipboard
       .writeText(listItem?.text)
       .then(() => {
-        return;
+        return setCopyId(listItem?.id);
       })
       .catch((error) => {
         console.error('Failed to copy text: ', error);
       });
   };
+
+  setTimeout(() => {
+    setCopyId('');
+  }, 1000);
 
   return (
     <div
@@ -81,7 +87,10 @@ const TodoList: React.FC<MyComponentProps> = ({ listItem, setTodoList }) => {
           <MarkIcon />
         </div>
 
-        <div onClick={copyToClipboard}>
+        <div
+          onClick={copyToClipboard}
+          className={copyId == listItem?.id ? 'clicked-effect' : ''}
+        >
           <CopyIcon />
         </div>
       </div>

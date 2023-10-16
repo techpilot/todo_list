@@ -42,6 +42,7 @@ const Todo = () => {
       localStorage.setItem('todoList', JSON.stringify(existingList));
       setTodoList(existingList);
       setInput('');
+      setCategoryState('All');
     }
   };
 
