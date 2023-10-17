@@ -95,7 +95,7 @@ const Todo = () => {
 
         <SelectComponent
           disabled={false}
-          elements={['All', 'Work', 'Read', 'Others']}
+          elements={['All', 'Urgent', 'Important', 'Others']}
           categoryState={categoryState}
           setCategoryState={setCategoryState}
           setTodoList={setTodoList}

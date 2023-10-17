@@ -26,9 +26,9 @@ describe('Todo Component', () => {
     render(<Todo />);
     const categorySelector = screen.getByText('All');
     fireEvent.click(categorySelector);
-    const workCategory = screen.getByText('Work');
+    const workCategory = screen.getByText('Urgent');
     fireEvent.click(workCategory);
-    const selectedCategory = screen.getByText('Work');
+    const selectedCategory = screen.getByText('Urgent');
     expect(selectedCategory).toBeInTheDocument();
   });
 
