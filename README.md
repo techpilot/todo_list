@@ -29,7 +29,7 @@ This Todo List project offers a seamless task management experience. Users can e
 - Developed nice, simple and responsive user interface that works in all devices and browsers improving user experience.
 - Implemented category feature for management of to-dos based on the type of task like urgent, impoertant tasks.
 - Implemented a feature to allow users mark to-dos as done.
-- Users can mark to-dos as done when they finish a specific task.
+- Built a unit test for core components of the project.
 
 ### Built With
 
