@@ -20,6 +20,7 @@ interface TodoState {
 const TodoList: React.FC<MyComponentProps> = ({ listItem, setTodoList }) => {
   const [copyId, setCopyId] = useState<string>('');
 
+  // Deletes a todo item from the list
   const deleteTodoItem: MouseEventHandler<Element> = () => {
     const todoList: string | null = localStorage.getItem('todoList') ?? '';
     const existingTodoList: TodoState[] =
@@ -33,6 +34,7 @@ const TodoList: React.FC<MyComponentProps> = ({ listItem, setTodoList }) => {
     setTodoList(updatedItem);
   };
 
+  // Marks a todo item as done
   const markAsRead: MouseEventHandler<Element> = () => {
     const todoList: string | null = localStorage.getItem('todoList') ?? '';
     const existingTodoList: TodoState[] =
@@ -49,6 +51,7 @@ const TodoList: React.FC<MyComponentProps> = ({ listItem, setTodoList }) => {
     setTodoList(updatedItem);
   };
 
+  // Copies an item to clipboard
   const copyToClipboard: MouseEventHandler<Element> = () => {
     navigator.clipboard
       .writeText(listItem?.text)

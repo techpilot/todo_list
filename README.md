@@ -22,10 +22,10 @@ This Todo List project offers a seamless task management experience. Users can e
 
 ## Rundown of features
 
-- Added a functionality to create Todo list items
-- Implemented a user-friendly autocomplete search feature, user can search for list items
-- Implemented a feature to copy todo list item contents into clipboard on clicking of an icon
-- Implemented a feature to store todo list items into localstorage so that user can see the data even after refreshing the page
+- Added a functionality to create Todo list items.
+- Implemented a user-friendly autocomplete search feature, user can search for list items.
+- Implemented a feature to copy todo list item contents into clipboard on clicking of an icon.
+- Implemented a feature to store todo list items into localstorage so that user can see the data even after refreshing the page.
 - Developed nice, simple and responsive user interface that works in all devices and browsers improving user experience.
 - Implemented category feature for management of to-dos based on the type of task like urgent, important tasks.
 - Implemented a feature to allow users mark to-dos as done.

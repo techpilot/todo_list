@@ -41,6 +41,7 @@ const Todo = () => {
     return existingList;
   };
 
+  // Adds a todo item and saves to localstorage
   const addTodo: MouseEventHandler<Element> = () => {
     const formattedDate: string = new Intl.DateTimeFormat(
       'en-US',

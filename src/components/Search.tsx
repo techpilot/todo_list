@@ -19,6 +19,7 @@ const Search: React.FC<SelectComponentProps> = ({
 }) => {
   const [searchterm, setSearchTerm] = useState<string>('');
 
+  // Hanldes searching to todo items using text keyword
   const handleSearch: ChangeEventHandler<Element> = (event: ChangeEvent) => {
     const elem = event.target as HTMLTextAreaElement;
     setSearchTerm(elem.value);
