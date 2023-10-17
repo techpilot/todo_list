@@ -27,7 +27,7 @@ This Todo List project offers a seamless task management experience. Users can e
 - Implemented a feature to copy todo list item contents into clipboard on clicking of an icon
 - Implemented a feature to store todo list items into localstorage so that user can see the data even after refreshing the page
 - Developed nice, simple and responsive user interface that works in all devices and browsers improving user experience.
-- Implemented category feature for management of to-dos based on the type of task like urgent, impoertant tasks.
+- Implemented category feature for management of to-dos based on the type of task like urgent, important tasks.
 - Implemented a feature to allow users mark to-dos as done.
 - Built a unit test for core components of the project.
 
