@@ -44,7 +44,7 @@ const Search: React.FC<SelectComponentProps> = ({
       <input
         value={searchterm}
         onChange={handleSearch}
-        placeholder="Search items"
+        placeholder="Search todo items"
         className="search-input"
       />
     </div>

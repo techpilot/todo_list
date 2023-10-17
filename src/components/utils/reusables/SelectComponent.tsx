@@ -55,9 +55,7 @@ const SelectComponent: React.FC<SelectComponentProps> = ({
           disabled={disabled}
         >
           {elements?.map((element, index) => (
-            <option key={index}>
-              <p>{element}</p>
-            </option>
+            <option key={index}>{element}</option>
           ))}
         </select>
       </div>

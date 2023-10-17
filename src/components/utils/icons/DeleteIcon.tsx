@@ -9,9 +9,9 @@ const DeleteIcon = () => {
         xmlns="http://www.w3.org/2000/svg"
         aria-labelledby="cancelIconTitle"
         stroke="#fff"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         fill="none"
         color="#fff"
       >
