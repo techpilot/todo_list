@@ -1,12 +1,13 @@
 .todo-container {
   display: flex;
+  margin: auto !important;
   flex-direction: column;
   width: 95vw;
   height: 90vh;
   border: none;
   border-radius: 10px;
   background-color: #161a2b;
-  margin-left: 0.1rem;
+  /* margin-left: 0.1rem; */
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 2rem;
@@ -222,7 +223,7 @@
 
 @media screen and (min-width: 1140px) {
   .todo-container {
-    width: 35vw;
+    width: 33vw;
   }
 
   .add-button {
