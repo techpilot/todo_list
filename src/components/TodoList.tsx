@@ -42,7 +42,11 @@ const TodoList: React.FC<MyComponentProps> = ({ listItem, setTodoList }) => {
 
     const updatedItem = existingTodoList?.map((item) => {
       if (item?.id === listItem?.id) {
-        return { ...item, completed: true };
+        if (item?.completed === true) {
+          return { ...item, completed: false };
+        } else {
+          return { ...item, completed: true };
+        }
       }
       return item;
     });
