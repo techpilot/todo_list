@@ -35,6 +35,8 @@ const Todo = () => {
   const [todoList, setTodoList] = useState<TodoState[]>([]);
   const [categoryState, setCategoryState] = useState<string>('All');
 
+  console.log(import.meta.env.VITE_SOME_KEY);
+
   const getExistingList = (): TodoState[] => {
     const eList: string | null = localStorage.getItem('todoList') ?? '';
     const existingList: TodoState[] =
